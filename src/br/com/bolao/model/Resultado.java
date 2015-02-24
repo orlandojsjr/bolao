@@ -7,7 +7,7 @@ public class Resultado {
 	private Time mandante;
 	private Integer golsMandante;
 	private Time visitante;
-	private Time golsVisitante;
+	private Integer golsVisitante;
 	
 	
 }
