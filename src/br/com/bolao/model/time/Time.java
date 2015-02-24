@@ -1,8 +1,14 @@
 package br.com.bolao.model.time;
 
-public abstract class Time {
+public class Time {
 	
-	protected String nome;
+	private String nome;
 	
-	abstract String getNome();
+	public Time(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
 }

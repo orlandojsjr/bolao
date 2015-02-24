@@ -11,7 +11,7 @@ public class RankingImpl implements Ranking {
 	@Override
 	public void exibir(Rodada rodada) {
 		List<Participante> participantes = processar(rodada);
-		participantes.forEach(p -> String.format("%s %d %d %d %d", p.getPalpiteiro().getNome(), p.getPontuacao().getGeral(), p.getPontuacao().getAcertoVencedorCabeca(), p.getPontuacao().getAcertoPlacarVencerdor(), p.getPontuacao().getAcertoVencedor()));
+		participantes.forEach(p -> String.format("%s %d %d %d %d", p.getUsuario().getNome(), p.getPontuacao().getGeral(), p.getPontuacao().getAcertoVencedorCabeca(), p.getPontuacao().getAcertoPlacarVencerdor(), p.getPontuacao().getAcertoVencedor()));
 	}
 	
 	private List<Participante> processar(Rodada rodada) {

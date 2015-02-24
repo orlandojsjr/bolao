@@ -4,13 +4,13 @@ import java.util.List;
 
 public class Rodada {
 	
-	private List<Jogo> jogos;
+	private List<Bolao> bolao;
 
-	public Rodada(List<Jogo> jogos) {
-		this.jogos = jogos;
+	public Rodada(List<Bolao> bolao) {
+		this.bolao = bolao;
 	}
 
-	public List<Jogo> getJogos() {
-		return jogos;
+	public List<Bolao> getBolao() {
+		return bolao;
 	}
 }

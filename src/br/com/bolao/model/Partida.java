@@ -1,7 +1,7 @@
 package br.com.bolao.model;
 
-public class Palpite {
+
+public class Partida {
 	
-	private Usuario usuario;
 	private Resultado placar;
 }

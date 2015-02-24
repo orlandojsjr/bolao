@@ -7,15 +7,15 @@ import org.junit.Test;
 
 import br.com.bolao.business.Ranking;
 import br.com.bolao.business.RankingImpl;
-import br.com.bolao.model.Jogo;
+import br.com.bolao.model.Bolao;
 import br.com.bolao.model.Rodada;
 
 public class BolaoTest {
 
 	@Test
 	public void test() {
-		List<Jogo> jogos = new ArrayList();
-		Rodada rodada = new Rodada(jogos);
+		List<Bolao> bolaoList = new ArrayList();
+		Rodada rodada = new Rodada(bolaoList);
 		Ranking ranking = new RankingImpl();
 		ranking.exibir(rodada);
 	}

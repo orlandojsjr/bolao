@@ -1,11 +1,13 @@
 package br.com.bolao.model;
 
-import br.com.bolao.model.time.Mandante;
-import br.com.bolao.model.time.Visitante;
+import br.com.bolao.model.time.Time;
 
 public class Resultado {
 	
-	private Mandante mandante;
-	private Visitante visitante;
+	private Time mandante;
+	private Integer golsMandante;
+	private Time visitante;
+	private Time golsVisitante;
+	
 	
 }
