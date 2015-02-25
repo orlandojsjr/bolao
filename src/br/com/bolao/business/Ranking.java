@@ -1,8 +1,12 @@
 package br.com.bolao.business;
 
-import br.com.bolao.model.Rodada;
+import java.util.List;
+
+import br.com.bolao.model.ranking.Participante;
 
 public interface Ranking {
 	
-	void exibir(Rodada rodada);
+	void exibir(List<Participante> participantes);
+	
+	List<Participante> getRankingOrdenado(List<Participante> participantes);
 }

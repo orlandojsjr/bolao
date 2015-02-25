@@ -1,5 +1,6 @@
 package br.com.bolao.model.ranking;
 
+import br.com.bolao.model.Pontos;
 import br.com.bolao.model.Usuario;
 
 public class Participante {
@@ -7,8 +8,8 @@ public class Participante {
 	private Usuario usuario;
 	private Pontuacao pontuacao;
 	
-	public Participante(Usuario usuario, Pontuacao pontuacao) {
-		this.usuario = usuario;
+	public Participante(String nome, Pontuacao pontuacao) {
+		this.usuario = new Usuario(nome);
 		this.pontuacao = pontuacao;
 	}
 	public Usuario getUsuario() {
@@ -16,5 +17,9 @@ public class Participante {
 	}
 	public Pontuacao getPontuacao() {
 		return pontuacao;
+	}
+	
+	public void atualizarPontuacao(Pontos pontos) {
+		pontuacao.atualizarPontuacao(pontos);
 	}
 }
