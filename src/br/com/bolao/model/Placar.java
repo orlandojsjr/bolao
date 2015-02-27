@@ -1,12 +1,12 @@
 package br.com.bolao.model;
 
 
-public class Resultado {
+public class Placar {
 	
 	private Integer golsMandante;
 	private Integer golsVisitante;
 	
-	public Resultado(Integer golsMandante, Integer golsVisitante) {
+	public Placar(Integer golsMandante, Integer golsVisitante) {
 		this.golsMandante = golsMandante;
 		this.golsVisitante = golsVisitante;
 	}

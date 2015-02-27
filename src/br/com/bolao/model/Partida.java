@@ -6,9 +6,9 @@ public class Partida {
 	
 	private Time mandante;
 	private Time visitante;
-	private Resultado placar;
+	private Placar placar;
 
-	public Partida(Time mandante, Time visitante, Resultado placar) {
+	public Partida(Time mandante, Time visitante, Placar placar) {
 		this.mandante = mandante;
 		this.visitante = visitante;
 		this.placar = placar;
@@ -22,7 +22,7 @@ public class Partida {
 		return visitante;
 	}
 
-	public Resultado getPlacar() {
+	public Placar getPlacar() {
 		return placar;
 	}
 }

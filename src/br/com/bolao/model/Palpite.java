@@ -3,9 +3,9 @@ package br.com.bolao.model;
 public class Palpite {
 	
 	private Usuario usuario;
-	private Resultado placar;
+	private Placar placar;
 
-	public Palpite(String usuario, Resultado placar) {
+	public Palpite(String usuario, Placar placar) {
 		this.usuario = new Usuario(usuario);
 		this.placar = placar;
 	}
@@ -14,7 +14,7 @@ public class Palpite {
 		return usuario;
 	}
 
-	public Resultado getPlacar() {
+	public Placar getPlacar() {
 		return placar;
 	}
 }

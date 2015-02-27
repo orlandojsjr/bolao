@@ -14,7 +14,7 @@ import br.com.bolao.business.RankingImpl;
 import br.com.bolao.model.Bolao;
 import br.com.bolao.model.Palpite;
 import br.com.bolao.model.Partida;
-import br.com.bolao.model.Resultado;
+import br.com.bolao.model.Placar;
 import br.com.bolao.model.ranking.Participante;
 import br.com.bolao.model.time.Time;
 
@@ -22,14 +22,14 @@ public class BolaoTest {
 	
 	Time mandante = new Time("Sao Paulo");
 	Time visitante = new Time("Corinthians");
-	Resultado resultado = new Resultado(5, 0);
+	Placar resultado = new Placar(5, 0);
 	Partida partida = new Partida(mandante, visitante, resultado);
 	
 	@SuppressWarnings("unchecked")
 	List<Palpite> palpites = new ArrayList() {{
-		add(new Palpite("Orlando", new Resultado(5,0)));
-		add(new Palpite("Arthur", new Resultado(5,2)));
-		add(new Palpite("Bjornn", new Resultado(1,0)));
+		add(new Palpite("Orlando", new Placar(5,0)));
+		add(new Palpite("Arthur", new Placar(5,2)));
+		add(new Palpite("Bjornn", new Placar(1,0)));
 	}};
 	Bolao bolao = new Bolao(partida, palpites);
 	

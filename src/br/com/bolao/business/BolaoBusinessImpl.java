@@ -8,7 +8,7 @@ import java.util.Map;
 import br.com.bolao.model.Bolao;
 import br.com.bolao.model.Palpite;
 import br.com.bolao.model.Pontos;
-import br.com.bolao.model.Resultado;
+import br.com.bolao.model.Placar;
 import br.com.bolao.model.ranking.Participante;
 import br.com.bolao.model.ranking.Pontuacao;
 
@@ -16,8 +16,8 @@ public class BolaoBusinessImpl implements BolaoBusiness {
 
 	Map<String, Participante> participantes = new HashMap();
 	
-	private void calcularPontos(Resultado placar, Palpite palpite) {
-		Resultado placarPalpite = palpite.getPlacar();
+	private void calcularPontos(Placar placar, Palpite palpite) {
+		Placar placarPalpite = palpite.getPlacar();
 		Participante participante = getParticipante(palpite.getUsuario().getNome());
 		
 		if(acertouNaCabeca(placar, placarPalpite)) {
@@ -33,15 +33,15 @@ public class BolaoBusinessImpl implements BolaoBusiness {
 		}
 	}
 	
-	private boolean acertouNaCabeca(Resultado placar, Resultado placarPalpite) {
+	private boolean acertouNaCabeca(Placar placar, Placar placarPalpite) {
 		return placar.getGolsMandante() == placarPalpite.getGolsMandante() && placar.getGolsVisitante() == placarPalpite.getGolsVisitante();
 	}
 	
-	private boolean acertouPlacarVencedor(Resultado placar, Resultado placarPalpite) {
+	private boolean acertouPlacarVencedor(Placar placar, Placar placarPalpite) {
 		return placar.getPlacarVencedor() == placarPalpite.getPlacarVencedor();
 	}
 	
-	private boolean acertouVencedor(Resultado placar, Resultado placarPalpite) {
+	private boolean acertouVencedor(Placar placar, Placar placarPalpite) {
 		return !placar.isEmpate() && (placar.getGolsMandante() > placar.getGolsVisitante() &&  placarPalpite.getGolsMandante() > placarPalpite.getGolsVisitante());
 		
 	}
@@ -55,7 +55,7 @@ public class BolaoBusinessImpl implements BolaoBusiness {
 	
 	@Override
 	public List<Participante> processar(Bolao bolao) {
-		Resultado placar = bolao.getPartida().getPlacar();
+		Placar placar = bolao.getPartida().getPlacar();
 		bolao.getPalpites().forEach(p -> calcularPontos(placar, p));
 		return new ArrayList<>(participantes.values());
 	}
