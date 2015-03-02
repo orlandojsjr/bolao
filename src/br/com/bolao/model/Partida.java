@@ -1,6 +1,5 @@
 package br.com.bolao.model;
 
-import br.com.bolao.model.time.Time;
 
 public class Partida {
 	

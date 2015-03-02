@@ -15,8 +15,8 @@ import br.com.bolao.model.Bolao;
 import br.com.bolao.model.Palpite;
 import br.com.bolao.model.Partida;
 import br.com.bolao.model.Placar;
+import br.com.bolao.model.Time;
 import br.com.bolao.model.ranking.Participante;
-import br.com.bolao.model.time.Time;
 
 public class BolaoTest {
 	

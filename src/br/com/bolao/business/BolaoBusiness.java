@@ -8,6 +8,4 @@ import br.com.bolao.model.ranking.Participante;
 public interface BolaoBusiness {
 
 	List<Participante> processar(Bolao bolao);
-	
-	List<Participante> processar(List<Bolao> bolaoList);
 }

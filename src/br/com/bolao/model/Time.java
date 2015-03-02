@@ -1,4 +1,4 @@
-package br.com.bolao.model.time;
+package br.com.bolao.model;
 
 public class Time {
 	

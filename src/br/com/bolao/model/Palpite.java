@@ -17,4 +17,8 @@ public class Palpite {
 	public Placar getPlacar() {
 		return placar;
 	}
+
+	public String getNomeParticipante() {
+		return usuario.getNome();
+	}
 }
