@@ -2,12 +2,12 @@ package br.com.bolao.model;
 
 import java.util.List;
 
-public class Bolao {
+public class Aposta {
 	
 	private Partida partida;
 	private List<Palpite> palpites;
 	
-	public Bolao(Partida partida, List<Palpite> palpites) {
+	public Aposta(Partida partida, List<Palpite> palpites) {
 		this.partida = partida;
 		this.palpites = palpites;
 	}

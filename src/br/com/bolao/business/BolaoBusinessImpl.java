@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import br.com.bolao.business.strategy.PontuacaoStrategy;
-import br.com.bolao.model.Bolao;
+import br.com.bolao.model.Aposta;
 import br.com.bolao.model.Palpite;
 import br.com.bolao.model.Pontos;
 import br.com.bolao.model.Placar;
@@ -30,7 +30,7 @@ public class BolaoBusinessImpl implements BolaoBusiness {
 	}
 	
 	@Override
-	public List<Participante> processar(Bolao bolao) {
+	public List<Participante> processar(Aposta bolao) {
 		Placar placar = bolao.getPartida().getPlacar();
 		bolao.getPalpites().forEach(p -> atualizarPontos(placar, p.getPlacar(), p.getNomeParticipante()));
 		return new ArrayList<>(participantes.values());

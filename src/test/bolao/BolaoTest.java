@@ -11,7 +11,7 @@ import br.com.bolao.business.BolaoBusiness;
 import br.com.bolao.business.BolaoBusinessImpl;
 import br.com.bolao.business.Ranking;
 import br.com.bolao.business.RankingImpl;
-import br.com.bolao.model.Bolao;
+import br.com.bolao.model.Aposta;
 import br.com.bolao.model.Palpite;
 import br.com.bolao.model.Partida;
 import br.com.bolao.model.Placar;
@@ -31,7 +31,7 @@ public class BolaoTest {
 		add(new Palpite("Arthur", new Placar(5,2)));
 		add(new Palpite("Bjornn", new Placar(1,0)));
 	}};
-	Bolao bolao = new Bolao(partida, palpites);
+	Aposta bolao = new Aposta(partida, palpites);
 	
 	@Test
 	public void test() {
