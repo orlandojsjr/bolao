@@ -30,9 +30,9 @@ public class BolaoBusinessImpl implements BolaoBusiness {
 	}
 	
 	@Override
-	public List<Participante> processar(Aposta bolao) {
-		Placar placar = bolao.getPartida().getPlacar();
-		bolao.getPalpites().forEach(p -> atualizarPontos(placar, p.getPlacar(), p.getNomeParticipante()));
+	public List<Participante> processar(Aposta aposta) {
+		Placar placar = aposta.getPartida().getPlacar();
+		aposta.getPalpites().forEach(p -> atualizarPontos(placar, p.getPlacar(), p.getNomeParticipante()));
 		return new ArrayList<>(participantes.values());
 	}
 }

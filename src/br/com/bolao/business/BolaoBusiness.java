@@ -7,5 +7,5 @@ import br.com.bolao.model.ranking.Participante;
 
 public interface BolaoBusiness {
 
-	List<Participante> processar(Aposta bolao);
+	List<Participante> processar(Aposta aposta);
 }

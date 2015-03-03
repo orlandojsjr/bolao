@@ -31,13 +31,13 @@ public class BolaoTest {
 		add(new Palpite("Arthur", new Placar(5,2)));
 		add(new Palpite("Bjornn", new Placar(1,0)));
 	}};
-	Aposta bolao = new Aposta(partida, palpites);
+	Aposta aposta = new Aposta(partida, palpites);
 	
 	@Test
 	public void test() {
 		Ranking ranking = new RankingImpl();
 		BolaoBusiness business = new BolaoBusinessImpl();
-		List<Participante> participantes = business.processar(bolao);
+		List<Participante> participantes = business.processar(aposta);
 		participantes = ranking.getRankingOrdenado(participantes);
 		
 		Assert.assertEquals(participantes.get(0).getUsuario().getNome(), "Orlando");
