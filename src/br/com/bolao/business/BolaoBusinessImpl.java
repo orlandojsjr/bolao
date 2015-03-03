@@ -7,8 +7,7 @@ import java.util.Map;
 
 import br.com.bolao.business.strategy.PontuacaoStrategy;
 import br.com.bolao.model.Aposta;
-import br.com.bolao.model.Palpite;
-import br.com.bolao.model.Pontos;
+import br.com.bolao.model.Bolao;
 import br.com.bolao.model.Placar;
 import br.com.bolao.model.ranking.Participante;
 import br.com.bolao.model.ranking.Pontuacao;
@@ -29,10 +28,13 @@ public class BolaoBusinessImpl implements BolaoBusiness {
 		return participantes.get(nome);
 	}
 	
-	@Override
-	public List<Participante> processar(Aposta aposta) {
-		Placar placar = aposta.getPartida().getPlacar();
-		aposta.getPalpites().forEach(p -> atualizarPontos(placar, p.getPlacar(), p.getNomeParticipante()));
+	private void processarAposta(Aposta aposta) {
+		aposta.getPalpites().forEach(p -> atualizarPontos(aposta.getPartida().getPlacar(), p.getPlacar(), p.getNomeParticipante()));
+	}
+	
+	@Override 
+	public List<Participante> processar(Bolao bolao) {
+		bolao.getApostas().forEach(aposta -> processarAposta(aposta));
 		return new ArrayList<>(participantes.values());
 	}
 }
