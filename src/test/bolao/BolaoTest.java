@@ -79,22 +79,22 @@ public class BolaoTest {
 		ranking.exibir(participantes);
 		
 		assertEquals(participantes.get(0).getUsuario().getNome(), "Orlando");
-		assertEquals(participantes.get(0).getPontuacao().getGeral().intValue(), 6);
-		assertEquals(participantes.get(0).getPontuacao().getAcertoVencedorCabeca().intValue(), 3);
-		assertEquals(participantes.get(0).getPontuacao().getAcertoPlacarVencedor().intValue(), 2);
-		assertEquals(participantes.get(0).getPontuacao().getAcertoVencedor().intValue(), 1);
+		assertEquals(participantes.get(0).getPontuacao().getGeral(), 6);
+		assertEquals(participantes.get(0).getPontuacao().getAcertoVencedorCabeca(), 3);
+		assertEquals(participantes.get(0).getPontuacao().getAcertoPlacarVencedor(), 2);
+		assertEquals(participantes.get(0).getPontuacao().getAcertoVencedor(), 1);
 		
 		assertEquals(participantes.get(1).getUsuario().getNome(), "Arthur");
-		assertEquals(participantes.get(1).getPontuacao().getGeral().intValue(), 3);
-		assertEquals(participantes.get(1).getPontuacao().getAcertoVencedorCabeca().intValue(), 0);
-		assertEquals(participantes.get(1).getPontuacao().getAcertoPlacarVencedor().intValue(), 2);
-		assertEquals(participantes.get(1).getPontuacao().getAcertoVencedor().intValue(), 1);
+		assertEquals(participantes.get(1).getPontuacao().getGeral(), 3);
+		assertEquals(participantes.get(1).getPontuacao().getAcertoVencedorCabeca(), 0);
+		assertEquals(participantes.get(1).getPontuacao().getAcertoPlacarVencedor(), 2);
+		assertEquals(participantes.get(1).getPontuacao().getAcertoVencedor(), 1);
 		
 		assertEquals(participantes.get(2).getUsuario().getNome(), "Bjornn");
-		assertEquals(participantes.get(2).getPontuacao().getGeral().intValue(), 1);
-		assertEquals(participantes.get(2).getPontuacao().getAcertoVencedorCabeca().intValue(), 0);
-		assertEquals(participantes.get(2).getPontuacao().getAcertoPlacarVencedor().intValue(), 0);
-		assertEquals(participantes.get(2).getPontuacao().getAcertoVencedor().intValue(), 1);
+		assertEquals(participantes.get(2).getPontuacao().getGeral(), 1);
+		assertEquals(participantes.get(2).getPontuacao().getAcertoVencedorCabeca(), 0);
+		assertEquals(participantes.get(2).getPontuacao().getAcertoPlacarVencedor(), 0);
+		assertEquals(participantes.get(2).getPontuacao().getAcertoVencedor(), 1);
 	}
 	
 	
@@ -105,21 +105,21 @@ public class BolaoTest {
 		ranking.exibir(participantes);
 		
 		assertEquals(participantes.get(0).getUsuario().getNome(), "Orlando");
-		assertEquals(participantes.get(0).getPontuacao().getGeral().intValue(), 15);
-		assertEquals(participantes.get(0).getPontuacao().getAcertoVencedorCabeca().intValue(), 6);
-		assertEquals(participantes.get(0).getPontuacao().getAcertoPlacarVencedor().intValue(), 6);
-		assertEquals(participantes.get(0).getPontuacao().getAcertoVencedor().intValue(), 3);
+		assertEquals(participantes.get(0).getPontuacao().getGeral(), 15);
+		assertEquals(participantes.get(0).getPontuacao().getAcertoVencedorCabeca(), 6);
+		assertEquals(participantes.get(0).getPontuacao().getAcertoPlacarVencedor(), 6);
+		assertEquals(participantes.get(0).getPontuacao().getAcertoVencedor(), 3);
 		
 		assertEquals(participantes.get(1).getUsuario().getNome(), "Bjornn");
-		assertEquals(participantes.get(1).getPontuacao().getGeral().intValue(), 7);
-		assertEquals(participantes.get(1).getPontuacao().getAcertoVencedorCabeca().intValue(), 3);
-		assertEquals(participantes.get(1).getPontuacao().getAcertoPlacarVencedor().intValue(), 2);
-		assertEquals(participantes.get(1).getPontuacao().getAcertoVencedor().intValue(), 2);
+		assertEquals(participantes.get(1).getPontuacao().getGeral(), 7);
+		assertEquals(participantes.get(1).getPontuacao().getAcertoVencedorCabeca(), 3);
+		assertEquals(participantes.get(1).getPontuacao().getAcertoPlacarVencedor(), 2);
+		assertEquals(participantes.get(1).getPontuacao().getAcertoVencedor(), 2);
 		
 		assertEquals(participantes.get(2).getUsuario().getNome(), "Arthur");
-		assertEquals(participantes.get(2).getPontuacao().getGeral().intValue(), 6);
-		assertEquals(participantes.get(2).getPontuacao().getAcertoVencedorCabeca().intValue(), 0);
-		assertEquals(participantes.get(2).getPontuacao().getAcertoPlacarVencedor().intValue(), 4);
-		assertEquals(participantes.get(2).getPontuacao().getAcertoVencedor().intValue(), 2);
+		assertEquals(participantes.get(2).getPontuacao().getGeral(), 6);
+		assertEquals(participantes.get(2).getPontuacao().getAcertoVencedorCabeca(), 0);
+		assertEquals(participantes.get(2).getPontuacao().getAcertoPlacarVencedor(), 4);
+		assertEquals(participantes.get(2).getPontuacao().getAcertoVencedor(), 2);
 	}
 }

@@ -1,37 +1,32 @@
 package br.com.bolao.model.ranking;
 
-import br.com.bolao.model.Pontos;
 
 public class Pontuacao {
 	
-	public Integer acertoVencedorCabeca = new Integer(0);
-	public Integer acertoPlacarVencedor = new Integer(0);
-	public Integer acertoVencedor = new Integer(0);
+	public int acertoVencedorCabeca;
+	public int acertoPlacarVencedor;
+	public int acertoVencedor;
 	
-	public Integer getGeral() {
+	public int getGeral() {
 		return acertoVencedorCabeca + acertoPlacarVencedor + acertoVencedor;
 	}
-	public Integer getAcertoVencedorCabeca() {
+	
+	public int getAcertoVencedorCabeca() {
 		return acertoVencedorCabeca;
 	}
-	public Integer getAcertoPlacarVencedor() {
+	public void setAcertoVencedorCabeca(int acertoVencedorCabeca) {
+		this.acertoVencedorCabeca = acertoVencedorCabeca;
+	}
+	public int getAcertoPlacarVencedor() {
 		return acertoPlacarVencedor;
 	}
-	public Integer getAcertoVencedor() {
+	public void setAcertoPlacarVencedor(int acertoPlacarVencedor) {
+		this.acertoPlacarVencedor = acertoPlacarVencedor;
+	}
+	public int getAcertoVencedor() {
 		return acertoVencedor;
 	}
-	
-	public void atualizarPontuacao(Pontos pontos) {
-		switch(pontos) {
-			case ACERTO_VENCEDOR_NA_CABECA: 
-				acertoVencedorCabeca += pontos.getPontos();
-			break;
-			case ACERTO_PLACAR_VENCEDOR: 
-				acertoPlacarVencedor += pontos.getPontos();
-			break;
-			case ACERTO_VENCEDOR: 
-				acertoVencedor += pontos.getPontos();
-			break;
-		}
+	public void setAcertoVencedor(int acertoVencedor) {
+		this.acertoVencedor = acertoVencedor;
 	}
 }

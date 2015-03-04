@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import br.com.bolao.business.strategy.PontuacaoStrategy;
+import br.com.bolao.business.strategy.PontuacaoResolver;
 import br.com.bolao.model.Aposta;
 import br.com.bolao.model.Bolao;
 import br.com.bolao.model.Placar;
@@ -15,10 +15,11 @@ import br.com.bolao.model.ranking.Pontuacao;
 public class BolaoBusinessImpl implements BolaoBusiness {
 
 	Map<String, Participante> participantes = new HashMap();
-	PontuacaoStrategy pontuacaoStrategy = new PontuacaoStrategy();
+	PontuacaoResolver pontuacaoResolver = new PontuacaoResolver();
 	
 	private void atualizarPontos(Placar placar, Placar placarPalpite, String nomeParticipante) {
-		pontuacaoStrategy.atualizar(placar, placarPalpite, getParticipante(nomeParticipante).getPontuacao());
+		Participante participante = getParticipante(nomeParticipante);
+		participante.setPontuacao(pontuacaoResolver.atualizar(placar, placarPalpite, participante.getPontuacao()));
 	}
 	
 	private Participante getParticipante(String nome) {
